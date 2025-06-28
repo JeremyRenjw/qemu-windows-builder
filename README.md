@@ -1,18 +1,18 @@
 # QEMU Windows Builder
 
-Automated Windows 10 VM image building using Packer and QEMU/KVM.
+Automated Windows 10 Ecosystem Application VM image building using Packer and QEMU/KVM.
 
 ## Overview
 
-This project automates the creation of Windows 10 22H2 virtual machine images optimized for QEMU/KVM environments. Perfect for development, testing, and enterprise deployments.
+This project automates the creation of Windows 10 22H2 virtual machine images optimized for QEMU/KVM environments with pre-installed ecosystem applications for enterprise development and deployment.
 
 ## Features
 
 - ✅ Automated Windows 10 22H2 installation
 - ✅ VirtIO drivers for optimal performance  
-- ✅ Pre-configured user accounts
-- ✅ Enterprise-ready configurations
-- ✅ Multiple build variants (minimal, ecosystem, custom)
+- ✅ Pre-configured enterprise user accounts
+- ✅ Complete ecosystem application suite
+- ✅ Ready-to-use development environment
 
 ## Quick Start
 
@@ -25,26 +25,26 @@ sudo apt install qemu-system packer
 # Download Windows 10 ISO to downloads/ directory
 ```
 
-### Build VM Image
+### Build Ecosystem VM Image
 
 ```bash
-# Simple build
-./build-simple-clean.sh
+# Complete ecosystem build with all applications
+./build-ecosystem-vm-complete.sh
 
-# Full ecosystem build  
+# Standard ecosystem build
+./build-ecosystem-vm.sh
+
+# Build with local ISO file
 ./build-with-local-iso.sh
-
-# Quick start
-./quick-start.sh
 ```
 
-## Build Variants
+## Main Build Scripts
 
-| Script | Description | Disk Size | Use Case |
-|--------|-------------|-----------|----------|
-| `build-simple-clean.sh` | Basic Windows 10 | 40GB | Testing |
-| `build-with-local-iso.sh` | Full ecosystem | 500GB | Development |
-| `build-minimal.sh` | Minimal install | 30GB | CI/CD |
+| Script | Description | Features |
+|--------|-------------|----------|
+| `build-ecosystem-vm-complete.sh` | Complete ecosystem | All dev tools + applications |
+| `build-with-local-iso.sh` | Local ISO build | Custom configuration |
+| `build.sh` | Standard build | Basic Windows + essentials |
 
 ## Configuration
 
