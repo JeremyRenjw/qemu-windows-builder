@@ -1,0 +1,42 @@
+# Build outputs
+output-*/
+windows/output-*/
+*.qcow2
+*.vmdk
+*.vdi
+
+# Logs
+*.log
+build-*.log
+
+# ISO files
+downloads/*.iso
+*.iso
+
+# Packer cache
+.cache/
+packer_cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Sensitive data
+secrets/
+credentials/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+*~
+.Spotlight-V100
+.Trashes
+ehthumbs.db
